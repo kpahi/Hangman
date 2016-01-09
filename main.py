@@ -31,6 +31,16 @@ print(arr)
 for i in arr:
 	for h in i:
 		cans.append(h)
+
+#Put two initial guess;
+ran = random.randint(0,q_len)
+cans[ran] = question[ran]
+ran = random.randint(0,q_len)
+cans[ran] = question[ran]
+
+
+
+
 print("Our question have {} words".format(q_len))
 
 print("Our Word:" ,' '.join(cans))
