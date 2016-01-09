@@ -26,13 +26,13 @@ arr.append('-'*len(question))
 print("\n")
 print(arr)
 
-print("Our question have {} words".format(q_len))
 #print("_ "*q_len)
 #Display the question:
 for i in arr:
 	for h in i:
 		cans.append(h)
-print(question)
+print("Our question have {} words".format(q_len))
+
 print("Our Word:" ,' '.join(cans))
 
 while True:
