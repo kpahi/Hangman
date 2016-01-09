@@ -5,7 +5,7 @@ import random
 
 
 #These are the key words:
-keys = ["nepal" , "about", "education", "handsome", "country"]
+keys = ["nepal" ,"facebook","skype","bhaktapur", "about", "education", "handsome", "country"]
 heart = 5
 trys = ""
 cans = []
@@ -18,6 +18,7 @@ man = ""
 
 
 question = random.choice(keys)
+#question = "aabbccde"
 q_len = len(question)
 
 arr = []
@@ -64,10 +65,17 @@ while True:
 		print("\n You used this letter")
 		continue
 	if x in question:
-		score += 25
-		trys += x
-		index = question.index(x)
-		cans[index] = x
+		for i in range(0,len(question)):
+			if x  == question[i]:
+				#index = question.index(x)
+				cans[i] = x
+				score += 25
+				trys += x
+				#continue
+
+			
+
+
 
 	
 		print("In line {} .", ' '.join(cans))
