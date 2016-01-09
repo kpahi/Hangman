@@ -32,12 +32,11 @@ for i in arr:
 	for h in i:
 		cans.append(h)
 
-#Put two initial guess;
-ran = random.randint(0,q_len)
-cans[ran] = question[ran]
-ran = random.randint(0,q_len)
-cans[ran] = question[ran]
-
+#Put some initial guess;
+ran1 = random.randint(1,3)
+for i in range(0,ran1):
+	ran = random.randint(0,q_len-1)
+	cans[ran] = question[ran]
 
 
 
