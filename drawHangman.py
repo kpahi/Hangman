@@ -1,4 +1,4 @@
-def hangman(trial):
+def hangman_parts(trial):
 	if trial == 0:
 		print("""\t  _________
 \t  |
@@ -12,7 +12,6 @@ def hangman(trial):
 	if trial == 4:
 		print("\t / \\")
 
-
-
-#for i in range(0,5):
-#	hangman(i)
+def hangman(trials):
+	for i in range(0,trials):
+		hangman_parts(i)

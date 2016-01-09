@@ -12,6 +12,8 @@ cans = []
 wans = ""
 number = "1234567890-=+/.,"
 score = 0
+trial =1 
+man = ""
 
 
 
@@ -30,10 +32,12 @@ for i in arr:
 	for h in i:
 		cans.append(h)
 print(question)
-print("Our Word:" ,' '.join(arr))
+print("Our Word:" ,' '.join(cans))
 
 while True:
-	if len(trys) == len(question):
+	print("\nNewConsole")
+	print('*'*40)
+	if len(trys) ==  len(question):
 		print("You won! Word: {} Your score: {}".format(question, score))
 		print("Please press 'Enter' to quit..")
 		break
@@ -49,6 +53,7 @@ while True:
 	
 
 	x = input("\n Please enter a letter: ")
+	sleep(0.9)
 	if 1 <len(x):
 		print("\n You can enter only 1 letter")
 		continue
@@ -59,11 +64,29 @@ while True:
 		print("\n You used this letter")
 		continue
 	if x in question:
+		score += 25
+		trys += x
 		index = question.index(x)
-		for i,char in enumerate(question):
-			cans[index] = x
-						
+		cans[index] = x
 
+	
+		print("In line {} .", ' '.join(cans))
+	else:
+		wans += x
+		heart -= 1
+		print("\n This letter {} is not in our world! {} heart left".format(x, heart))
+		sleep(0.7)
+		drawHangman.hangman(trial)
+		trial += 1
+
+	print('*'*20)
+
+					
+
+try:
+	input()
+except SyntaxError:
+	pass
 
 
 #print(question)
